@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +11,9 @@
   --lighter-black: #0b0b0b;
   --grey: #302e2e;
   --light-grey: #c8c7c7;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .container {
@@ -24,6 +29,9 @@
 
 p {
   font-size: 18px;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 h1 {
@@ -382,21 +390,16 @@ textarea::placeholder {
 /*  Project Section Styling */
 
 .projects {
-  height: 90vh;
-  padding: 32px 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .project-slide {
   position: relative;
-  height: 90%;
-}
-
-.btns-container {
-  position: absolute;
-  top: 85%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  height: 80%;
 }
 
 .carousel-btn {
@@ -409,26 +412,145 @@ textarea::placeholder {
   background-color: var(--grey);
   border: none;
 }
- 
-.project-details-cont{
-  
+
+.project-details-cont {
   background-color: var(--lighter-black);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
 .project-details {
-  position: relative;
-  height: 500px;
-  margin:0 15%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
+.project-description {
+  width: 90%;
+  height: 60%;
+  overflow: hidden;
+  padding: 14px 0;
 }
 
 .project-image-container {
-  object-fit: cover;
-  height: 50%;
+  width: 100%;
 }
 
 .project-image {
-  height: 90%;
+  aspect-ratio: 2/1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text-container a {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--black);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+
+.more-proj-message {
+  text-transform: capitalize;
+  padding-top: 8px;
+}
+
+/* Education Section Styling */
+
+.education {
+  height: 95vh;
+  padding: 32px 0;
+}
+
+.education-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  gap: 5%;
+
+  padding-top: 50px;
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+}
+
+.edu-container {
+  border: 1px solid var(--light-grey);
+  background-color: var(--lighter-black);
+  border-radius: 4px;
+
+  padding: 12px 16px;
+}
+
+.institution-logo-container {
+  background-color: var(--black);
+  padding: 12px 24px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institution-logo-container svg {
+  height: 100%;
+}
+
+.edu-text-container {
+  width: 90%;
+  padding: 8px 0;
+}
+
+.year-container {
+  background-color: var(--black);
+  width: 25%;
+  text-align: center;
+  padding: 4px 8px;
+}
+
+.scroll-indicator {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.ani-container {
+  margin: 10px;
+  animation-duration: 0.3s;
+  border-radius: 50%;
+
+  background-color: var(--lighter-black);
+  width: 8%;
+  height: 8px;
+}
+
+.animate {
+  background-color: var(--white);
+  height: 100%;
+  width: 25%;
+  border-radius: 25%;
+  animation-name: moveToRight;
+  animation-duration: 03s;
+  animation-fill-mode: forwards;
+  animation-name: moveToRight;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  
 }
