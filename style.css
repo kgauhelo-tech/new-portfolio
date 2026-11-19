@@ -466,10 +466,10 @@ button {
 
 .contact-left {
   flex: 1;
+  align-self: baseline;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  align-self: end;
+  gap: 27px;
 }
 
 .contact-text {
@@ -508,6 +508,7 @@ button {
 }
 
 .contact-right {
+  align-self: baseline;
   flex: 1;
 }
 
@@ -1100,7 +1101,6 @@ textarea::placeholder {
 
   .project-description {
     width: 100%;
-    /* height: 50px; */
     font-size: 14px;
     overflow: hidden;
     padding: 8px 0;
